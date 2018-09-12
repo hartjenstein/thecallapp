@@ -36,7 +36,6 @@ module.exports = {
           handler: 'staleWhileRevalidate'
         }]
       })
-      })
     ],
     devServer: {
         contentBase: path.join(__dirname, 'public')
