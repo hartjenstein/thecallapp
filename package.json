@@ -14,7 +14,7 @@
     "dev-server": "webpack-dev-server",
     "heroku-postbuild": "yarn run build"
   },
-  "name": "TheCall",
+  "name": "indecision",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Harti",
