@@ -10,9 +10,10 @@
   "scripts": {
     "serve": "live-server public",
     "build": "webpack",
-    "dev-server": "webpack-dev-server"
+    "dev-server": "webpack-dev-server",
+    "heroku-postbuild": "yarn run build"
   },
-  "name": "indecision",
+  "name": "TheCall",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Harti",
