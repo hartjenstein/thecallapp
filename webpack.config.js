@@ -27,22 +27,12 @@ module.exports = {
     devtool: 'cheap-module-eval-source-map',
 
     plugins: [
-      new cleanPlugin([dist]),
-      new htmlPlugin({
-        filename: 'index.html',
-        title: 'Get Started With Workbox For Webpack'
-      }),
       new workboxPlugin.GenerateSW({
         swDest: 'sw.js',
         clientsClaim: true,
         skipWaiting: true,
-        runtimeCaching: [{
-          urlPattern: new RegExp('https://hacker-news.firebaseio.com'),
-          handler: 'staleWhileRevalidate'
-        }]
       })
     ],
-
     devServer: {
         contentBase: path.join(__dirname, 'public')
     }
