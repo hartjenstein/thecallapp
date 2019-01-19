@@ -31,16 +31,10 @@ module.exports = {
         swDest: 'sw.js',
         clientsClaim: true,
         skipWaiting: true,
-        runtimeCaching: [
-          {
-              urlPattern: /images/,
-              handler: 'cacheFirst'
-          },
-          {
-              urlPattern: /.*/,
-              handler: 'networkFirst'
-          }
-        ]
+        runtimeCaching: [{
+          urlPattern: new RegExp('https://the-call.herokuapp.com'),
+          handler: 'staleWhileRevalidate'
+        }]
       })
     ],
     devServer: {
